@@ -10,6 +10,7 @@ import {
   getMonacoLanguage,
 } from "../../utils/language/languageUtils";
 import CopyButton from "../common/buttons/CopyButton";
+import PlayButton from "../common/buttons/PlayButton";
 import { useTheme } from "../../contexts/ThemeContext";
 import RawButton from "../common/buttons/RawButton";
 import Admonition from "../utils/Admonition";
@@ -203,7 +204,7 @@ export const PreviewCodeBlock: React.FC<PreviewCodeBlockProps> = ({
             background: `linear-gradient(to top, ${backgroundColor}, transparent)`,
           }}
         />
-
+        <PlayButton text={code} />
         <CopyButton text={code} />
         {!isRecycleView &&
           isPublicView !== undefined &&
